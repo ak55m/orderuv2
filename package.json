@@ -1,0 +1,30 @@
+{
+  "name": "orderuv2",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Food ordering system with customer, restaurant, and admin platforms",
+  "main": "index.js",
+  "scripts": {
+    "install:all": "npm install && cd customer-platform && npm install && cd ../restaurant-platform && npm install && cd ../admin-platform && npm install",
+    "dev:customer": "cd customer-platform && npm run dev",
+    "dev:restaurant": "cd restaurant-platform && npm run dev",
+    "dev:admin": "cd admin-platform && npm run dev",
+    "build:customer": "cd customer-platform && npm run build",
+    "build:restaurant": "cd restaurant-platform && npm run build",
+    "build:admin": "cd admin-platform && npm run build",
+    "build": "npm run build:customer && npm run build:restaurant && npm run build:admin",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "workspaces": [
+    "customer-platform",
+    "restaurant-platform",
+    "admin-platform",
+    "shared"
+  ],
+  "dependencies": {
+    "clsx": "^2.1.1",
+    "tailwind-merge": "^3.2.0"
+  }
+}
